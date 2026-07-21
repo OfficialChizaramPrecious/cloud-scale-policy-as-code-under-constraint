@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ubi.example/grc-stage5/schemas/compliance-report.schema.json",
+  "title": "Compliance report",
+  "description": "Generated artifact produced by running the policy bundle over the versioned state. It is never hand-edited: it is regenerated from control-state.json through the documented build command, so adding an asset or exception to the state updates the report without any change to policy source.",
+  "type": "object",
+  "required": ["schema_version", "source_state", "reference_time", "controls_evaluated", "decisions", "summary"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "source_state": {
+      "type": "string",
+      "description": "Filename of the state the report was generated from."
+    },
+    "reference_time": {
+      "type": "string",
+      "description": "The state's generated_at value. All expiry and freshness comparisons use this rather than wall-clock time, so the report is reproducible."
+    },
+    "controls_evaluated": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 3,
+      "maxItems": 3,
+      "description": "The three assigned control outcomes. Exactly three, per the board constraint."
+    },
+    "decisions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/reportEntry" }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["total_decisions", "allowed", "denied"],
+      "properties": {
+        "total_decisions": { "type": "integer", "minimum": 0 },
+        "allowed": { "type": "integer", "minimum": 0 },
+        "denied": { "type": "integer", "minimum": 0 }
+      }
+    }
+  },
+  "$defs": {
+    "reportEntry": {
+      "title": "Report entry",
+      "description": "One decision with its provenance. asset_locator and evidence_locator are JSON-pointer references into the source state, so every reported outcome can be traced to the exact position it was derived from.",
+      "type": "object",
+      "required": ["policy_id", "resource_id", "asset_locator", "allow", "violation_code", "evidence_locator"],
+      "properties": {
+        "policy_id": {
+          "enum": [
+            "NF.IDENTITY.PRIVILEGED_ASSURANCE",
+            "NF.STORAGE.RESTRICTED_PROTECTION",
+            "NF.ENDPOINT.MANAGED_HEALTH"
+          ]
+        },
+        "resource_id": { "type": "string", "minLength": 1 },
+        "asset_locator": {
+          "type": "string",
+          "pattern": "^[^#]+#/.+$",
+          "description": "Source file and JSON pointer, e.g. control-state.json#/storage/1"
+        },
+        "allow": { "type": "boolean" },
+        "violation_code": {
+          "type": ["string", "null"],
+          "description": "Null when allow is true."
+        },
+        "evidence_locator": {
+          "type": "string",
+          "pattern": "^[^#]+#/.+$",
+          "description": "The raw locator backing this decision, used to reconcile against evidence-index.csv."
+        }
+      }
+    }
+  }
+}

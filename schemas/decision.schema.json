@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ubi.example/grc-stage5/schemas/decision.schema.json",
+  "title": "Policy decision",
+  "description": "Emitted by each control package for a single evaluation. A deny always carries exactly one violation_code, selected by an explicit precedence order so output is deterministic when several violations apply at once; the complete set remains available at <package>.violations.",
+  "type": "object",
+  "required": ["allow", "control_id", "resource_id"],
+  "additionalProperties": false,
+  "properties": {
+    "allow": {
+      "type": "boolean",
+      "description": "False when any violation applies. Defaults to false; the engine fails closed."
+    },
+    "control_id": {
+      "enum": [
+        "NF.IDENTITY.PRIVILEGED_ASSURANCE",
+        "NF.STORAGE.RESTRICTED_PROTECTION",
+        "NF.ENDPOINT.MANAGED_HEALTH"
+      ],
+      "description": "The assigned control outcome that produced this decision."
+    },
+    "resource_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the evaluated asset or exception, carried through from input."
+    },
+    "violation_code": {
+      "$ref": "#/$defs/violationCode",
+      "description": "Present only when allow is false."
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "allow": { "const": false } }, "required": ["allow"] },
+      "then": { "required": ["violation_code"] }
+    },
+    {
+      "if": { "properties": { "allow": { "const": true } }, "required": ["allow"] },
+      "then": { "not": { "required": ["violation_code"] } }
+    }
+  ],
+  "$defs": {
+    "violationCode": {
+      "type": "string",
+      "enum": [
+        "IDENTITY_MFA_WEAK",
+        "IDENTITY_OWNER_MISSING",
+        "IDENTITY_CREDENTIAL_STALE",
+        "EXCEPTION_EXPIRED",
+        "EXCEPTION_INCOMPLETE",
+        "STORAGE_PUBLIC",
+        "STORAGE_UNENCRYPTED",
+        "STORAGE_LOG_MISSING",
+        "ENDPOINT_UNMANAGED",
+        "ENDPOINT_DISK_UNENCRYPTED",
+        "ENDPOINT_EDR_UNHEALTHY",
+        "ENDPOINT_STALE"
+      ],
+      "description": "Closed vocabulary of violation outcomes. Codes are grouped by control and ordered within each control by the precedence used to select the primary violation."
+    }
+  }
+}
