@@ -1,0 +1,105 @@
+﻿{
+  "controls_evaluated": [
+    "NF.ENDPOINT.MANAGED_HEALTH",
+    "NF.IDENTITY.PRIVILEGED_ASSURANCE",
+    "NF.STORAGE.RESTRICTED_PROTECTION"
+  ],
+  "decisions": [
+    {
+      "allow": false,
+      "asset_locator": "control-state.json#/identities/2",
+      "evidence_locator": "control-state.json#/identities/2",
+      "policy_id": "NF.IDENTITY.PRIVILEGED_ASSURANCE",
+      "resource_id": "svc-201",
+      "violation_code": "IDENTITY_OWNER_MISSING"
+    },
+    {
+      "allow": true,
+      "asset_locator": "control-state.json#/identities/0",
+      "evidence_locator": "control-state.json#/identities/0",
+      "policy_id": "NF.IDENTITY.PRIVILEGED_ASSURANCE",
+      "resource_id": "usr-101",
+      "violation_code": null
+    },
+    {
+      "allow": false,
+      "asset_locator": "control-state.json#/identities/1",
+      "evidence_locator": "control-state.json#/identities/1",
+      "policy_id": "NF.IDENTITY.PRIVILEGED_ASSURANCE",
+      "resource_id": "usr-102",
+      "violation_code": "IDENTITY_MFA_WEAK"
+    },
+    {
+      "allow": true,
+      "asset_locator": "control-state.json#/identities/3",
+      "evidence_locator": "control-state.json#/identities/3",
+      "policy_id": "NF.IDENTITY.PRIVILEGED_ASSURANCE",
+      "resource_id": "usr-103",
+      "violation_code": null
+    },
+    {
+      "allow": true,
+      "asset_locator": "control-state.json#/storage/2",
+      "evidence_locator": "control-state.json#/storage/2",
+      "policy_id": "NF.STORAGE.RESTRICTED_PROTECTION",
+      "resource_id": "archive-c",
+      "violation_code": null
+    },
+    {
+      "allow": true,
+      "asset_locator": "control-state.json#/storage/0",
+      "evidence_locator": "control-state.json#/storage/0",
+      "policy_id": "NF.STORAGE.RESTRICTED_PROTECTION",
+      "resource_id": "bucket-a",
+      "violation_code": null
+    },
+    {
+      "allow": false,
+      "asset_locator": "control-state.json#/storage/1",
+      "evidence_locator": "control-state.json#/storage/1",
+      "policy_id": "NF.STORAGE.RESTRICTED_PROTECTION",
+      "resource_id": "bucket-b",
+      "violation_code": "STORAGE_PUBLIC"
+    },
+    {
+      "allow": true,
+      "asset_locator": "control-state.json#/endpoints/0",
+      "evidence_locator": "control-state.json#/endpoints/0",
+      "policy_id": "NF.ENDPOINT.MANAGED_HEALTH",
+      "resource_id": "dev-301",
+      "violation_code": null
+    },
+    {
+      "allow": false,
+      "asset_locator": "control-state.json#/endpoints/1",
+      "evidence_locator": "control-state.json#/endpoints/1",
+      "policy_id": "NF.ENDPOINT.MANAGED_HEALTH",
+      "resource_id": "dev-302",
+      "violation_code": "ENDPOINT_UNMANAGED"
+    },
+    {
+      "allow": false,
+      "asset_locator": "control-state.json#/endpoints/2",
+      "evidence_locator": "control-state.json#/endpoints/2",
+      "policy_id": "NF.ENDPOINT.MANAGED_HEALTH",
+      "resource_id": "dev-303",
+      "violation_code": "ENDPOINT_EDR_UNHEALTHY"
+    },
+    {
+      "allow": false,
+      "asset_locator": "control-state.json#/exceptions/0",
+      "evidence_locator": "control-state.json#/exceptions/0",
+      "policy_id": "NF.IDENTITY.PRIVILEGED_ASSURANCE",
+      "resource_id": "exc-01",
+      "violation_code": "EXCEPTION_EXPIRED"
+    }
+  ],
+  "reference_time": "2026-07-13T08:00:00Z",
+  "schema_version": "1.0",
+  "source_state": "control-state.json",
+  "summary": {
+    "allowed": 5,
+    "denied": 6,
+    "total_decisions": 11
+  }
+}
