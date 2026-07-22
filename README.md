@@ -25,7 +25,7 @@ For every asset, the policy engine produces a decision containing the policy ID,
 
 Before getting started, make sure you have:
 
-- **OPA** 1.18.2 or later — this is a single binary, so no installation is required. Download it from https://www.openpolicyagent.org/docs/latest/#running-opa and place `opa` (or `opa.exe`) either in your repository root or somewhere on your system PATH.
+- **OPA** 1.18.2 or later,  this is a single binary, so no installation is required. Download it from https://www.openpolicyagent.org/docs/latest/#running-opa and place `opa` (or `opa.exe`) either in your repository root or somewhere on your system PATH.
 - You don't need an additional runtime, package manager, or network access.
 
 Verified environment: Windows 11 (windows/amd64), OPA 1.18.2, Rego v1.
