@@ -1,10 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ubi.example/grc-stage5/schemas/decision.schema.json",
+  "$id": "decision.schema.json",
   "title": "Policy decision",
   "description": "Emitted by each control package for a single evaluation. A deny always carries exactly one violation_code, selected by an explicit precedence order so output is deterministic when several violations apply at once; the complete set remains available at <package>.violations.",
   "type": "object",
-  "required": ["allow", "control_id", "resource_id"],
+  "required": [
+    "allow",
+    "control_id",
+    "resource_id"
+  ],
   "additionalProperties": false,
   "properties": {
     "allow": {
@@ -31,12 +35,40 @@
   },
   "allOf": [
     {
-      "if": { "properties": { "allow": { "const": false } }, "required": ["allow"] },
-      "then": { "required": ["violation_code"] }
+      "if": {
+        "properties": {
+          "allow": {
+            "const": false
+          }
+        },
+        "required": [
+          "allow"
+        ]
+      },
+      "then": {
+        "required": [
+          "violation_code"
+        ]
+      }
     },
     {
-      "if": { "properties": { "allow": { "const": true } }, "required": ["allow"] },
-      "then": { "not": { "required": ["violation_code"] } }
+      "if": {
+        "properties": {
+          "allow": {
+            "const": true
+          }
+        },
+        "required": [
+          "allow"
+        ]
+      },
+      "then": {
+        "not": {
+          "required": [
+            "violation_code"
+          ]
+        }
+      }
     }
   ],
   "$defs": {

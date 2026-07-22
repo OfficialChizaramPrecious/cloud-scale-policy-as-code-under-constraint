@@ -31,11 +31,11 @@ freshness_window_ns := 86400000000000 # 24 hours in nanoseconds
 
 # ---------- data-path resolution ----------
 
-reference_time := t if {
+snapshot_time := t if {
 	t := data.generated_at
 }
 
-reference_time := t if {
+snapshot_time := t if {
 	not data.generated_at
 	t := data.control_state.generated_at
 }
@@ -67,11 +67,13 @@ violations contains "ENDPOINT_STALE" if {
 }
 
 fresh_endpoint if {
-	ref_ns := time.parse_rfc3339_ns(reference_time)
-	seen_ns := time.parse_rfc3339_ns(input.last_seen)
-	ref_ns - seen_ns <= freshness_window_ns
-	seen_ns <= ref_ns
+    snapshot := time.parse_rfc3339_ns(snapshot_time)
+    seen := time.parse_rfc3339_ns(input.last_seen)
+
+    seen <= snapshot
+    snapshot - seen <= freshness_window_ns
 }
+
 
 # ---------- deterministic decision ----------
 

@@ -1,10 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ubi.example/grc-stage5/schemas/input.schema.json",
+  "$id": "input.schema.json",
   "title": "Policy engine input",
   "description": "Shapes accepted by the policy bundle. Exactly one of the four variants applies to a given evaluation. Every variant carries resource_id so the emitted decision can be traced to an exact asset locator in the source state.",
   "type": "object",
-  "required": ["resource_id"],
+  "required": [
+    "resource_id"
+  ],
   "properties": {
     "resource_id": {
       "type": "string",
@@ -13,20 +15,38 @@
     }
   },
   "oneOf": [
-    { "$ref": "#/$defs/identityInput" },
-    { "$ref": "#/$defs/storageInput" },
-    { "$ref": "#/$defs/endpointInput" },
-    { "$ref": "#/$defs/exceptionInput" }
+    {
+      "$ref": "#/$defs/identityInput"
+    },
+    {
+      "$ref": "#/$defs/storageInput"
+    },
+    {
+      "$ref": "#/$defs/endpointInput"
+    },
+    {
+      "$ref": "#/$defs/exceptionInput"
+    }
   ],
   "$defs": {
     "identityInput": {
       "title": "Identity input",
       "description": "Evaluated by NF.IDENTITY.PRIVILEGED_ASSURANCE. Human identities are assessed on MFA strength; service identities on ownership and credential age.",
       "type": "object",
-      "required": ["type", "privileged"],
+      "required": [
+        "type",
+        "privileged"
+      ],
       "properties": {
-        "type": { "enum": ["human", "service"] },
-        "privileged": { "type": "boolean" },
+        "type": {
+          "enum": [
+            "human",
+            "service"
+          ]
+        },
+        "privileged": {
+          "type": "boolean"
+        },
         "mfa": {
           "type": "string",
           "description": "Authentication factor in use. Only phishing-resistant satisfies the control for privileged human identities."
@@ -37,70 +57,142 @@
           "description": "Age of the current credential. Privileged service identities must not exceed 90."
         },
         "owner": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Named accountable owner. Null or empty fails the control for privileged service identities."
         },
-        "last_review": { "type": "string" },
-        "id": { "type": "string" },
-        "resource_id": { "type": "string" }
+        "last_review": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "resource_id": {
+          "type": "string"
+        }
       }
     },
     "storageInput": {
       "title": "Storage input",
       "description": "Evaluated by NF.STORAGE.RESTRICTED_PROTECTION. Only restricted and confidential classifications are in scope.",
       "type": "object",
-      "required": ["classification"],
+      "required": [
+        "classification"
+      ],
       "properties": {
         "classification": {
           "type": "string",
           "description": "Data classification of the store. Values other than restricted or confidential are out of scope for this control."
         },
-        "public": { "type": "boolean" },
+        "public": {
+          "type": "boolean"
+        },
         "encryption": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Encryption mode. The literal value none, an empty string, or a missing value fails the control."
         },
         "log_sink": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Reference to a log sink. When the logging inventory is available, the sink must exist and be immutable."
         },
-        "id": { "type": "string" },
-        "resource_id": { "type": "string" }
+        "id": {
+          "type": "string"
+        },
+        "resource_id": {
+          "type": "string"
+        }
       }
     },
     "endpointInput": {
       "title": "Endpoint input",
       "description": "Evaluated by NF.ENDPOINT.MANAGED_HEALTH. Freshness is measured against the state's generated_at, not wall-clock time.",
       "type": "object",
-      "required": ["managed"],
+      "required": [
+        "managed"
+      ],
       "properties": {
-        "managed": { "type": "boolean" },
-        "disk_encrypted": { "type": "boolean" },
-        "edr_healthy": { "type": "boolean" },
+        "managed": {
+          "type": "boolean"
+        },
+        "disk_encrypted": {
+          "type": "boolean"
+        },
+        "edr_healthy": {
+          "type": "boolean"
+        },
         "last_seen": {
           "type": "string",
           "description": "RFC 3339 timestamp. Missing or unparseable values fail closed as stale."
         },
-        "id": { "type": "string" },
-        "resource_id": { "type": "string" }
+        "id": {
+          "type": "string"
+        },
+        "resource_id": {
+          "type": "string"
+        }
       }
     },
     "exceptionInput": {
       "title": "Exception input",
       "description": "A documented exception to a control. All five governance fields are mandatory; incomplete, malformed, or expired exceptions fail closed.",
       "type": "object",
-      "required": ["owner", "reason", "approved_by", "expires_at", "compensating_control"],
+      "required": [
+        "owner",
+        "reason",
+        "approved_by",
+        "expires_at",
+        "compensating_control"
+      ],
       "properties": {
-        "owner": { "type": ["string", "null"], "minLength": 1 },
-        "reason": { "type": ["string", "null"], "minLength": 1 },
-        "approved_by": { "type": ["string", "null"], "minLength": 1 },
+        "owner": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "approved_by": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
         "expires_at": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "RFC 3339 expiry. An expiry at or before the state's generated_at is expired."
         },
-        "compensating_control": { "type": ["string", "null"], "minLength": 1 },
-        "id": { "type": "string" },
-        "resource_id": { "type": "string" }
+        "compensating_control": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "id": {
+          "type": "string"
+        },
+        "resource_id": {
+          "type": "string"
+        }
       }
     }
   }

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "project_id": "GRC-A1",
+  "variant": "v1",
+  "evidence_marker": "UBI-A5-264EFAFE5E84",
+  "assigned_pack": {
+    "file_name": "grc-stage-5-shared-b1 (5).tar.gz",
+    "sha256": "35401DB7422C5A289692AD33B8D0A69D2ABCD668379709CAA6BFBF38E9948CCB",
+    "manifest_signature": "REPLACE-WITH-THE-STAFF-SIGNATURE",
+    "verified_before_use": true
+  },
+  "commit": "9eb95b08bb18b11bb16054eeb504314e0f7412c3",
+  "supported_environment": {
+    "os": "Windows 11 (windows/amd64)",
+    "cpu": "Intel(R) Celeron(R) N4020 CPU @ 1.10GHz",
+    "memory_gb": 3900,
+    "tool_versions": {
+      "opa": "1.18.2",
+      "rego": "v1",
+      "go": "1.26.4",
+      "git": "git version 2.55.0.windows.3"
+    }
+  },
+  "commands": {
+    "provision": "opa version",
+    "build": "opa eval -d policy-bundle/ -d control-state.json \"data.policy.report.compliance_report\" --format pretty > compliance-report.json",
+    "test": "opa test policy-bundle/ tests/ -v",
+    "clean": "rm -f compliance-report.json tests/test-results.json"
+  },
+  "results": {
+    "public_tests": {
+      "passed": 41,
+      "failed": 0,
+      "report": "tests/test-results.json"
+    },
+    "runtime_seconds": 0,
+    "peak_memory_mb": 0,
+    "output_hashes": {
+      "compliance-report.json": "71711E3B56BDB089329DCA10160F380DF737AC5E93868BF90F74F694B282019C"
+    }
+  },
+  "inputs": [
+    "control-state.json",
+    "public-fixtures.json"
+  ],
+  "outputs": [
+    "compliance-report.json",
+    "tests/test-results.json"
+  ],
+  "manual_preconditions": [
+    "The OPA binary (1.18.2 or later) must be on PATH or present in the repository root. No other runtime, package manager, or network access is required.",
+    "control-state.json must be the assigned pack copy, verified against the staff signature before use.",
+    "Commands are given in POSIX form. The verified environment was Windows 11 with PowerShell; the PowerShell equivalents are documented in README.md."
+  ],
+  "known_limitations": [
+    "The acceptance suite contains 41 assertions, which include the 18 published fixtures plus positive, malformed-input, exception-expiry, audit-log, and violation-precedence cases. Passing it does not prove correctness against the hidden state fixtures.",
+    "Log-sink validation applies the full existence-and-immutability check only when the logging inventory is present in loaded data. Standalone fixture inputs, which carry no inventory, are accepted on a non-empty sink reference.",
+    "The written analysis covers only the three assigned control outcomes. Other identified gaps are dispositioned as reduce, defer, or accept in control-mapping.csv rather than implemented.",
+    "Runtime and memory figures were recorded on a single machine and are indicative, not a performance guarantee."
+  ]
+}

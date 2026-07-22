@@ -1,6 +1,0 @@
-{
-  "type": "human",
-  "privileged": true,
-  "mfa": "sms",
-  "resource_id": "asset-d738f3"
-}
