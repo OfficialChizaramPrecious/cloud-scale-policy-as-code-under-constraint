@@ -2,7 +2,7 @@
 
 Stage 5 submission: policy-as-code implementation of three assigned control outcomes for CloudScale Dynamics, along with the supporting gap analysis, corrected framework mapping, evidence index, and policy addendum.
 
-**Repository:** [https://github.com/OfficialChizaramPrecious/cloud-scale-policy-as-code-under-constraint.git]  
+**Repository:** https://github.com/OfficialChizaramPrecious/cloud-scale-policy-as-code-under-constraint.git
 **Frozen commit:** 9eb95b08bb18b11bb16054eeb504314e0f7412c3
 **Candidate:** Chizaram Precious / UBI-2026-0099
 
