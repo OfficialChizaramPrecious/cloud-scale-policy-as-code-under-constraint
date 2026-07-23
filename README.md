@@ -45,8 +45,7 @@ opa version
 PowerShell:
 
 ```powershell
-opa eval -d policy-bundle/ -d control-state.json "data.policy.report.compliance_report" --format pretty | Set-Content -Encoding utf8 compliance-report.json
-```
+opa eval -d policy-bundle/ -d control-state.json "data.policy.report.compliance_report" --format pretty | Out-File -FilePath compliance-report.json -Encoding utf8
 
 POSIX shell:
 
@@ -65,8 +64,7 @@ Expected result: all tests pass, covering the 18 published fixtures along with t
 To generate a machine-readable report:
 
 ```powershell
-opa test policy-bundle/ tests/ --format json | Set-Content -Encoding utf8 tests/test-results.json
-```
+opa test policy-bundle/ tests/ --format json | Out-File -FilePath test-results.json -Encoding utf8 ```
 
 ### Check — parse and type-check the bundle
 
@@ -81,14 +79,14 @@ If nothing is returned, all modules compiled successfully.
 PowerShell:
 
 ```powershell
-Remove-Item -ErrorAction SilentlyContinue compliance-report.json, tests/test-results.json, bundle.tar.gz
-```
+Remove-Item -ErrorAction SilentlyContinue compliance-report.json, test-results.json, bundle.tar.gz
+Remove-Item -ErrorAction SilentlyContinue compliance-report.json, test-results.json, bundle.tar.gz
 
 POSIX shell:
 
 ```bash
-rm -f compliance-report.json tests/test-results.json bundle.tar.gz
-```
+rm -f compliance-report.json test-results.json bundle.tar.gz
+rm -f compliance-report.json test-results.json bundle.tar.gz```
 
 ## Repository layout
 

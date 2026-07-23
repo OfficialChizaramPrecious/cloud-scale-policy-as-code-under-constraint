@@ -40,7 +40,7 @@ Legal basis carried forward. My Phase 1 NDPA notification work (Sections 40 and 
 
 3. Provenance evidence
 
-Phase 1 provenance held at artifact level: every risk-register row, mapping row, and roadmap action cited the stage, task, and source file it came from, and no recommendation appeared without a citation. That chain is intact in the delivered documents and is unchanged by this stage.
+Phase 1 provenance held at artifact level: every risk-register row, mapping row, and roadmap action cited the stage, task, and source file it came from, and no recommendation appeared without a citation. That chain is intact in the delivered documents and was not changed  by in this  stage.
 
 Stage 5 preserves and strengthens the same rule. Every claim in policy-gap-report.pdf has a row in evidence-index.csv giving artifact path, exact locator, collection time, SHA-256, what it proves, what it does not prove, and the alternative considered. Machine claims additionally reconcile to compliance-report.json, which is regenerated from control-state.json through documented commands rather than edited by hand.
 

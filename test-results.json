@@ -1,224 +1,4 @@
-[
-  {
-    "location": {
-      "file": "tests\\storage_test.rego",
-      "row": 188,
-      "col": 1
-    },
-    "package": "data.policy.storage_test",
-    "name": "test_full_violation_set_retained",
-    "duration": 2053100
-  },
-  {
-    "location": {
-      "file": "tests\\endpoint_test.rego",
-      "row": 143,
-      "col": 1
-    },
-    "package": "data.policy.endpoint_test",
-    "name": "test_unmanaged_precedes_other_violations",
-    "duration": 5004900
-  },
-  {
-    "location": {
-      "file": "tests\\endpoint_test.rego",
-      "row": 128,
-      "col": 1
-    },
-    "package": "data.policy.endpoint_test",
-    "name": "test_unparseable_last_seen_treated_as_stale",
-    "duration": 7541100
-  },
-  {
-    "location": {
-      "file": "tests\\endpoint_test.rego",
-      "row": 155,
-      "col": 1
-    },
-    "package": "data.policy.endpoint_test",
-    "name": "test_full_violation_set_retained",
-    "duration": 1987300
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 25,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_p_opa_01_privileged_human_weak_mfa_denied",
-    "duration": 15086200
-  },
-  {
-    "location": {
-      "file": "tests\\endpoint_test.rego",
-      "row": 20,
-      "col": 1
-    },
-    "package": "data.policy.endpoint_test",
-    "name": "test_p_opa_07_unmanaged_endpoint_denied",
-    "duration": 18269800
-  },
-  {
-    "location": {
-      "file": "tests\\endpoint_test.rego",
-      "row": 48,
-      "col": 1
-    },
-    "package": "data.policy.endpoint_test",
-    "name": "test_p_opa_09_unhealthy_edr_denied",
-    "duration": 3618000
-  },
-  {
-    "location": {
-      "file": "tests\\endpoint_test.rego",
-      "row": 35,
-      "col": 1
-    },
-    "package": "data.policy.endpoint_test",
-    "name": "test_p_opa_08_unencrypted_disk_denied",
-    "duration": 3494900
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 39,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_p_opa_02_privileged_service_missing_owner_denied",
-    "duration": 4488100
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 52,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_p_opa_03_privileged_service_stale_credential_denied",
-    "duration": 7739500
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 79,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_p_opa_12_incomplete_exception_denied",
-    "duration": 11110800
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 65,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_p_opa_11_expired_exception_denied",
-    "duration": 17857100
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 106,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_p_opa_14_privileged_service_missing_owner_denied",
-    "duration": 4820100
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 119,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_p_opa_15_privileged_service_stale_credential_denied",
-    "duration": 4519800
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 134,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_privileged_human_phishing_resistant_allowed",
-    "duration": 3978800
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 93,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_p_opa_13_privileged_human_weak_mfa_denied",
-    "duration": 14315500
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 146,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_non_privileged_human_weak_mfa_allowed",
-    "duration": 993300
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 157,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_privileged_service_owned_and_current_allowed",
-    "duration": 4121300
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 169,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_valid_unexpired_exception_allowed",
-    "duration": 11110300
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 184,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_empty_string_owner_treated_as_missing",
-    "duration": 6958500
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 211,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_exception_missing_compensating_control_denied",
-    "duration": 8323800
-  },
-  {
-    "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 197,
-      "col": 1
-    },
-    "package": "data.policy.identity_test",
-    "name": "test_unparseable_expiry_fails_closed",
-    "duration": 17112000
-  },
+﻿[
   {
     "location": {
       "file": "tests\\identity_test.rego",
@@ -237,47 +17,17 @@
     },
     "package": "data.policy.storage_test",
     "name": "test_p_opa_04_restricted_public_denied",
-    "duration": 5980300
+    "duration": 4013500
   },
   {
     "location": {
-      "file": "tests\\identity_test.rego",
-      "row": 226,
+      "file": "tests\\endpoint_test.rego",
+      "row": 20,
       "col": 1
     },
-    "package": "data.policy.identity_test",
-    "name": "test_owner_missing_precedes_stale_credential",
-    "duration": 16258300
-  },
-  {
-    "location": {
-      "file": "tests\\storage_test.rego",
-      "row": 51,
-      "col": 1
-    },
-    "package": "data.policy.storage_test",
-    "name": "test_p_opa_06_restricted_missing_log_sink_denied",
-    "duration": 9042400
-  },
-  {
-    "location": {
-      "file": "tests\\storage_test.rego",
-      "row": 64,
-      "col": 1
-    },
-    "package": "data.policy.storage_test",
-    "name": "test_p_opa_16_restricted_public_denied",
-    "duration": 3985700
-  },
-  {
-    "location": {
-      "file": "tests\\storage_test.rego",
-      "row": 78,
-      "col": 1
-    },
-    "package": "data.policy.storage_test",
-    "name": "test_p_opa_17_confidential_unencrypted_denied",
-    "duration": 4487000
+    "package": "data.policy.endpoint_test",
+    "name": "test_p_opa_07_unmanaged_endpoint_denied",
+    "duration": 4013500
   },
   {
     "location": {
@@ -287,97 +37,27 @@
     },
     "package": "data.policy.storage_test",
     "name": "test_p_opa_05_confidential_unencrypted_denied",
-    "duration": 6485500
-  },
-  {
-    "location": {
-      "file": "tests\\storage_test.rego",
-      "row": 91,
-      "col": 1
-    },
-    "package": "data.policy.storage_test",
-    "name": "test_p_opa_18_restricted_missing_log_sink_denied",
-    "duration": 6985300
-  },
-  {
-    "location": {
-      "file": "tests\\storage_test.rego",
-      "row": 106,
-      "col": 1
-    },
-    "package": "data.policy.storage_test",
-    "name": "test_non_immutable_sink_rejected",
-    "duration": 2490900
-  },
-  {
-    "location": {
-      "file": "tests\\storage_test.rego",
-      "row": 134,
-      "col": 1
-    },
-    "package": "data.policy.storage_test",
-    "name": "test_compliant_restricted_store_allowed",
-    "duration": 3548800
-  },
-  {
-    "location": {
-      "file": "tests\\storage_test.rego",
-      "row": 119,
-      "col": 1
-    },
-    "package": "data.policy.storage_test",
-    "name": "test_unknown_sink_rejected",
-    "duration": 11020300
-  },
-  {
-    "location": {
-      "file": "tests\\storage_test.rego",
-      "row": 147,
-      "col": 1
-    },
-    "package": "data.policy.storage_test",
-    "name": "test_internal_classification_out_of_scope_allowed",
-    "duration": 6470300
-  },
-  {
-    "location": {
-      "file": "tests\\storage_test.rego",
-      "row": 176,
-      "col": 1
-    },
-    "package": "data.policy.storage_test",
-    "name": "test_public_precedes_unencrypted",
-    "duration": 4724800
-  },
-  {
-    "location": {
-      "file": "tests\\storage_test.rego",
-      "row": 161,
-      "col": 1
-    },
-    "package": "data.policy.storage_test",
-    "name": "test_empty_string_sink_denied",
-    "duration": 8892400
+    "duration": 4247400
   },
   {
     "location": {
       "file": "tests\\endpoint_test.rego",
-      "row": 101,
+      "row": 35,
       "col": 1
     },
     "package": "data.policy.endpoint_test",
-    "name": "test_endpoint_seen_just_outside_window_denied",
-    "duration": 3911300
+    "name": "test_p_opa_08_unencrypted_disk_denied",
+    "duration": 12827500
   },
   {
     "location": {
-      "file": "tests\\endpoint_test.rego",
-      "row": 76,
+      "file": "tests\\storage_test.rego",
+      "row": 51,
       "col": 1
     },
-    "package": "data.policy.endpoint_test",
-    "name": "test_healthy_endpoint_allowed",
-    "duration": 993000
+    "package": "data.policy.storage_test",
+    "name": "test_p_opa_06_restricted_missing_log_sink_denied",
+    "duration": 17779400
   },
   {
     "location": {
@@ -387,7 +67,27 @@
     },
     "package": "data.policy.endpoint_test",
     "name": "test_p_opa_10_stale_endpoint_denied",
-    "duration": 3973700
+    "duration": 4383500
+  },
+  {
+    "location": {
+      "file": "tests\\endpoint_test.rego",
+      "row": 76,
+      "col": 1
+    },
+    "package": "data.policy.endpoint_test",
+    "name": "test_healthy_endpoint_allowed",
+    "duration": 993900
+  },
+  {
+    "location": {
+      "file": "tests\\endpoint_test.rego",
+      "row": 48,
+      "col": 1
+    },
+    "package": "data.policy.endpoint_test",
+    "name": "test_p_opa_09_unhealthy_edr_denied",
+    "duration": 13553200
   },
   {
     "location": {
@@ -397,7 +97,7 @@
     },
     "package": "data.policy.endpoint_test",
     "name": "test_endpoint_seen_just_inside_window_allowed",
-    "duration": 5481000
+    "duration": 1986700
   },
   {
     "location": {
@@ -407,6 +107,306 @@
     },
     "package": "data.policy.endpoint_test",
     "name": "test_missing_last_seen_treated_as_stale",
-    "duration": 4801200
+    "duration": 1986000
+  },
+  {
+    "location": {
+      "file": "tests\\endpoint_test.rego",
+      "row": 101,
+      "col": 1
+    },
+    "package": "data.policy.endpoint_test",
+    "name": "test_endpoint_seen_just_outside_window_denied",
+    "duration": 2979600
+  },
+  {
+    "location": {
+      "file": "tests\\endpoint_test.rego",
+      "row": 143,
+      "col": 1
+    },
+    "package": "data.policy.endpoint_test",
+    "name": "test_unmanaged_precedes_other_violations",
+    "duration": 14289600
+  },
+  {
+    "location": {
+      "file": "tests\\endpoint_test.rego",
+      "row": 155,
+      "col": 1
+    },
+    "package": "data.policy.endpoint_test",
+    "name": "test_full_violation_set_retained",
+    "duration": 0
+  },
+  {
+    "location": {
+      "file": "tests\\endpoint_test.rego",
+      "row": 128,
+      "col": 1
+    },
+    "package": "data.policy.endpoint_test",
+    "name": "test_unparseable_last_seen_treated_as_stale",
+    "duration": 16294800
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 25,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_p_opa_01_privileged_human_weak_mfa_denied",
+    "duration": 4009600
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 39,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_p_opa_02_privileged_service_missing_owner_denied",
+    "duration": 3742400
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 52,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_p_opa_03_privileged_service_stale_credential_denied",
+    "duration": 11400100
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 65,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_p_opa_11_expired_exception_denied",
+    "duration": 11666900
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 93,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_p_opa_13_privileged_human_weak_mfa_denied",
+    "duration": 6176900
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 79,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_p_opa_12_incomplete_exception_denied",
+    "duration": 14122200
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 106,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_p_opa_14_privileged_service_missing_owner_denied",
+    "duration": 10474300
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 134,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_privileged_human_phishing_resistant_allowed",
+    "duration": 0
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 146,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_non_privileged_human_weak_mfa_allowed",
+    "duration": 0
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 119,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_p_opa_15_privileged_service_stale_credential_denied",
+    "duration": 2529900
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 157,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_privileged_service_owned_and_current_allowed",
+    "duration": 2004400
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 169,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_valid_unexpired_exception_allowed",
+    "duration": 12106000
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 184,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_empty_string_owner_treated_as_missing",
+    "duration": 10929600
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 197,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_unparseable_expiry_fails_closed",
+    "duration": 9825400
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 211,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_exception_missing_compensating_control_denied",
+    "duration": 12502100
+  },
+  {
+    "location": {
+      "file": "tests\\identity_test.rego",
+      "row": 226,
+      "col": 1
+    },
+    "package": "data.policy.identity_test",
+    "name": "test_owner_missing_precedes_stale_credential",
+    "duration": 6012900
+  },
+  {
+    "location": {
+      "file": "tests\\storage_test.rego",
+      "row": 64,
+      "col": 1
+    },
+    "package": "data.policy.storage_test",
+    "name": "test_p_opa_16_restricted_public_denied",
+    "duration": 2004000
+  },
+  {
+    "location": {
+      "file": "tests\\storage_test.rego",
+      "row": 78,
+      "col": 1
+    },
+    "package": "data.policy.storage_test",
+    "name": "test_p_opa_17_confidential_unencrypted_denied",
+    "duration": 4550700
+  },
+  {
+    "location": {
+      "file": "tests\\storage_test.rego",
+      "row": 106,
+      "col": 1
+    },
+    "package": "data.policy.storage_test",
+    "name": "test_non_immutable_sink_rejected",
+    "duration": 5348200
+  },
+  {
+    "location": {
+      "file": "tests\\storage_test.rego",
+      "row": 91,
+      "col": 1
+    },
+    "package": "data.policy.storage_test",
+    "name": "test_p_opa_18_restricted_missing_log_sink_denied",
+    "duration": 27006800
+  },
+  {
+    "location": {
+      "file": "tests\\storage_test.rego",
+      "row": 119,
+      "col": 1
+    },
+    "package": "data.policy.storage_test",
+    "name": "test_unknown_sink_rejected",
+    "duration": 19112600
+  },
+  {
+    "location": {
+      "file": "tests\\storage_test.rego",
+      "row": 134,
+      "col": 1
+    },
+    "package": "data.policy.storage_test",
+    "name": "test_compliant_restricted_store_allowed",
+    "duration": 2004700
+  },
+  {
+    "location": {
+      "file": "tests\\storage_test.rego",
+      "row": 147,
+      "col": 1
+    },
+    "package": "data.policy.storage_test",
+    "name": "test_internal_classification_out_of_scope_allowed",
+    "duration": 1064500
+  },
+  {
+    "location": {
+      "file": "tests\\storage_test.rego",
+      "row": 161,
+      "col": 1
+    },
+    "package": "data.policy.storage_test",
+    "name": "test_empty_string_sink_denied",
+    "duration": 2004000
+  },
+  {
+    "location": {
+      "file": "tests\\storage_test.rego",
+      "row": 176,
+      "col": 1
+    },
+    "package": "data.policy.storage_test",
+    "name": "test_public_precedes_unencrypted",
+    "duration": 4012000
+  },
+  {
+    "location": {
+      "file": "tests\\storage_test.rego",
+      "row": 188,
+      "col": 1
+    },
+    "package": "data.policy.storage_test",
+    "name": "test_full_violation_set_retained",
+    "duration": 0
   }
 ]
