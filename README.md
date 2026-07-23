@@ -4,7 +4,8 @@ Stage 5 submission: policy-as-code implementation of three assigned control outc
 
 **Repository:** https://github.com/OfficialChizaramPrecious/cloud-scale-policy-as-code-under-constraint.git
 
-**Frozen commit:** 9eb95b08bb18b11bb16054eeb504314e0f7412c3
+**Frozen commit:** 656400772e11efa51a224a0dc87c09a77e4a9e48
+
 **Candidate:** Chizaram Precious / UBI-2026-0099
 
 ---

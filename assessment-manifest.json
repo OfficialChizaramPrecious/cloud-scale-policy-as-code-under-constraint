@@ -10,7 +10,7 @@
     "manifest_signature": "8aa3106de2f66df5e4f91b1fa28162b4184c6afe72f62c0b33857f6301709e2f",
     "verified_before_use":true
   },
-  "commit": "9eb95b08bb18b11bb16054eeb504314e0f7412c3",
+  "commit": "656400772e11efa51a224a0dc87c09a77e4a9e48",
   "supported_environment": {
     "os": "Windows 11 (windows/amd64)",
     "cpu": "Intel(R) Celeron(R) N4020 CPU @ 1.10GHz",

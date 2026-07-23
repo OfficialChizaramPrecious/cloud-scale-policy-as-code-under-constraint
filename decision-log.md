@@ -3,7 +3,7 @@ Decision Log — GRC Advanced 1: Policy Gap Under Constraint
 Candidate: Chizaram Precious Patrick · 
 Intern ID: UBI-2026-0099 
 Evidence marker: UBI-A5-264EFAFE5E84 
-Frozen commit: [FINAL-COMMIT-HASH]
+Frozen commit: 656400772e11efa51a224a0dc87c09a77e4a9e48
 
 Entries are in the order the decisions were made. Each major conclusion records at least one alternative that was considered and why it was weakened or retained, per the anti-shortcut standard. Entries D-08 onward were made during implementation and testing; D-11, D-12, and D-15 record changes made after evidence from test runs.
 

@@ -62,4 +62,4 @@ Exception model — owner, reason, approver, expiry, compensating control, with 
 Evidence-quality model — the proves / does-not-prove / alternative-considered / disposition columns in evidence-index.csv, with SHA-256 pinning and exact locators.
 Decision ledger — compliance-report.json, regenerable from state through documented commands, plus the reasoning trail in decision-log.md.
 Deferral register — every non-implemented finding with owner and review trigger, in control-mapping.csv.
-The frozen commit for this stage, recorded in assessment-manifest.json, which Stage 6 cites as its previous-stage pin.
+The frozen commit for this stage is 656400772e11efa51a224a0dc87c09a77e4a9e48, recorded in assessment-manifest.json, and is the pin Stage 6 cites as its previous-stage reference.

@@ -7,7 +7,7 @@ Track: GRC
 Project: GRC-A1 — Policy Gap Under Constraint
 Variant: V1
 Evidence marker: UBI-A5-264EFAFE5E84
-Frozen Commit: 9eb95b08bb18b11bb16054eeb504314e0f7412c3
+Frozen Commit: 656400772e11efa51a224a0dc87c09a77e4a9e48
 Repository: https://github.com/OfficialChizaramPrecious/cloud-scale-policy-as-code-under-constraint.git
 Date: 7-21-2026
 
